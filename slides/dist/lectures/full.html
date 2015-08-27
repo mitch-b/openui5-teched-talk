@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>XML Binding and Rapid Prototyping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="XML Binding and Rapid Prototyping">
+    <link href="/xmlbinding-slides/assets/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/xmlbinding-slides/assets/css/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-state="index-slide" class="index-section">
+          <h3 class="plain">XML Binding and Rapid Prototyping</h3>
+          <h4 class="plain">SAP TechEd 2015 : Barcelona</h4>
+        </section>
+        <section data-state="index-slide" class="index-section">
+          <h3>Introductions</h3>
+        </section>
+        <section>
+          <h1><i class="fa fa-github"></i></h1>
+          <p>These slides are up on GitHub!</p><a href="https://github.com/mitch-b/openui5-teched-talk" target="_blank">mitch-b/openui5-teched-talk</a>
+        </section>
+        <section>
+          <h2>Introductions</h2>
+          <ul>
+            <li>Mitchell Barry<a href="https://twitter.com/mitchbarry" target="_blank"> (@mitchbarry)</a></li>
+            <li>Peder Rice<a href="https://twitter.com/Peder_Rice" target="_blank"> (@Peder_Rice)</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Topics</h1>
+          <ul>
+            <li>Why XML?</li>
+            <li>Upcoming XML Binding Features (demos!)</li>
+            <li>Testing your apps</li>
+            <li>Prototyping</li>
+            <li>Using JSBin</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Why use XML views?</h1>
+        </section>
+        <section>
+          <h1>XML views</h1>
+          <p>
+            <ul>
+              <li>SAP's direction with Fiori</li>
+              <ul>
+                <li>Standards</li>
+                <li>Primary focus</li>
+                <li>Consistency</li>
+              </ul>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h1>XML views</h1>
+          <p><strong> Business logic</strong> can easily sneak into JavaScript-based views</p>
+        </section>
+        <section>
+          <h1>XML views</h1>
+          <p>
+            <XML>views are&nbsp;</XML><strong>declarative</strong> and easy to quickly decipher
+          </p>
+        </section>
+        <section>
+          <h4>JS View Example</h4>
+          <pre><code class="js" data-trim>
+sap.ui.jsview("sample.View1", {
+
+    getControllerName : function() {
+        return "sample.View1";
+    },
+
+    createContent : function(oController) {
+        var aControls = [];
+        var oButton = new sap.ui.commons.Button({
+          id : this.createId("myButton"),
+          text : "Click me!"
+        });
+        aControls.push(oButton);
+        return aControls;
+    }
+});
+
+</code>
+</pre>
+        </section>
+        <section>
+          <h4>XML View Example</h4>
+          <pre><code class="xml" data-trim>
+&lt;mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  controllerName="sample.View1"
+  xmlns="sap.m">
+  &lt;Button id="myButton" text="Click me!" /&gt;
+&lt;/mvc:View&gt;
+
+</code></pre>
+        </section>
+      </div>
+    </div>
+    <script src="/xmlbinding-slides/assets/js/app.js"></script>
+  </body>
+</html>
