@@ -97,12 +97,12 @@ gulp.task('connect', function(cb) {
     .use(redirect())
     .use(function(req, res, next) {
       if (req.url == '/') {
-        res.redirect('/xmlbinding-slides');
+        res.redirect('/openui5-teched-talk');
       } else {
         next();
       }
     })
-    .use('/xmlbinding-slides', connect.static('dist'))
+    .use('/openui5-teched-talk', connect.static('dist'))
     .listen(8001);
     cb();
 });

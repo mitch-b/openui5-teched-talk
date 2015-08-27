@@ -1,7 +1,7 @@
 {
-  "name": "xmlbinding-slides",
+  "name": "openui5-teched-talk",
   "version": "0.0.1",
-  "description": "xmlbinding-slides",
+  "description": "openui5-teched-talk",
   "main": "index.js",
   "devDependencies": {
     "connect": "2.14.3",
