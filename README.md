@@ -4,6 +4,6 @@ Please see [`ABSTRACT.md`](ABSTRACT.md), submitted as a response to the [OpenUI5
 
 Samples/demos for talk can be found in [`samples/`](samples/).
 
-Slides for the talk can be found [here](http://mitch-b.github.io/openui5-teched-talk/#/).
+Slides for the talk can be found [here](http://mitch-b.github.io/openui5-teched-talk/lectures/full.html).
 
 > Prepared by: Mitchell Barry, Peder Rice

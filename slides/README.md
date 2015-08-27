@@ -1,4 +1,4 @@
-# [View Slides](http://mitch-b.github.io/openui5-teched-talk/#/)
+# [View Slides](http://mitch-b.github.io/openui5-teched-talk/lectures/full.html)
 > reveal.js template stolen from Object Partners' [react-workshop](https://github.com/objectpartners/react-workshop/tree/master/slidedeck)
 
 
