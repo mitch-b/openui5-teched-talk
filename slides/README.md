@@ -1,5 +1,8 @@
-# Slides
+# [View Slides](http://mitch-b.github.io/openui5-teched-talk/#/)
 > reveal.js template stolen from Object Partners' [react-workshop](https://github.com/objectpartners/react-workshop/tree/master/slidedeck)
+
+
+### For Developers
 
 * [Node](http://nodejs.org/)
 * [Gulp](https://github.com/gulpjs/gulp) `npm install -g gulp`
