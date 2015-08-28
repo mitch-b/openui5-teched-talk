@@ -87,3 +87,37 @@ include ../includes/mixins
         &lt;/mvc:View&gt;
 
         </code>
+
+  section
+    h1 Upcoming XML Binding and Expression Features
+    p
+      | Preview what's coming in <code>1.30.x</code> release
+
+  section
+    section
+      h2 Re-using views with fragments
+
+    section
+      pre.
+        <code class='xml' data-trim>
+          &lt;core:FragmentDefinition
+            xmlns="sap.m"
+            xmlns:core="sap.ui.core"&gt;
+            &lt;Label text="{myDescription}" /&gt;
+            &lt;Input value="{myValue}" /&gt;
+          &lt;/core:FragmentDefinition&gt;
+
+        </code>
+
+    section
+      pre.
+        <code class='xml' data-trim>
+          &lt;mvc:View
+            xmlns="sap.m"
+            xmlns:core="sap.ui.core"
+            xmlns:mvc="sap.ui.core.mvc"&gt;
+            &lt;core:Fragment fragmentName="sample.fragment.Field" type="XML" /&gt;
+          &lt;/mvc:View&gt;
+
+        </code>
+
