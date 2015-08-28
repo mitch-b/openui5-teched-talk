@@ -34,60 +34,56 @@ include ../includes/mixins
     h1 Why use XML views?
 
   section
-    h1 XML views
+    h2 Fiori
+    p SAP's direction with Fiori is XML
+    ul
+      li Standards
+      li Primary focus
+      li Consistency
+
+  section
+    h2 Logical Separation
     p
-      ul
-        li SAP's direction with Fiori
-        ul
-          li Standards
-          li Primary focus
-          li Consistency
+      | <strong>Business logic</strong> can easily sneak into JavaScript-based views
 
   section
-    h1 XML views
-    p
-      strong  Business logic
-      |  can easily sneak into JavaScript-based views
+    section
+      h2 Easy to read
+      p
+        | XML views are <strong>declarative</strong> and easy to quickly decipher
 
-  section
-    h1 XML views
-    p
-      XML views are&nbsp;
-      strong declarative
-      |  and easy to quickly decipher
+    section
+      h4 JS View Example
+      pre.
+        <code class="js" data-trim>
+        sap.ui.jsview("sample.View1", {
 
-  section
-    h4 JS View Example
-    pre.
-      <code class="js" data-trim>
-      sap.ui.jsview("sample.View1", {
+            getControllerName : function() {
+                return "sample.View1";
+            },
 
-          getControllerName : function() {
-              return "sample.View1";
-          },
+            createContent : function(oController) {
+                var aControls = [];
+                var oButton = new sap.ui.commons.Button({
+                  id : this.createId("myButton"),
+                  text : "Click me!"
+                });
+                aControls.push(oButton);
+                return aControls;
+            }
+        });
 
-          createContent : function(oController) {
-              var aControls = [];
-              var oButton = new sap.ui.commons.Button({
-                id : this.createId("myButton"),
-                text : "Click me!"
-              });
-              aControls.push(oButton);
-              return aControls;
-          }
-      });
+        </code>
 
-      </code>
+    section
+      h4 XML View Example
+      pre.
+        <code class="xml" data-trim>
+        &lt;mvc:View
+          xmlns:mvc="sap.ui.core.mvc"
+          controllerName="sample.View1"
+          xmlns="sap.m">
+          &lt;Button id="myButton" text="Click me!" /&gt;
+        &lt;/mvc:View&gt;
 
-  section
-    h4 XML View Example
-    pre.
-      <code class="xml" data-trim>
-      &lt;mvc:View
-        xmlns:mvc="sap.ui.core.mvc"
-        controllerName="sample.View1"
-        xmlns="sap.m">
-        &lt;Button id="myButton" text="Click me!" /&gt;
-      &lt;/mvc:View&gt;
-
-      </code>
+        </code>
