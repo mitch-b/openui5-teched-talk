@@ -104,6 +104,39 @@ sap.ui.jsview("sample.View1", {
   &lt;Button id="myButton" text="Click me!" /&gt;
 &lt;/mvc:View&gt;
 
+</code>
+</pre>
+          </section>
+        </section>
+        <section>
+          <h1>Upcoming XML Binding and Expression Features</h1>
+          <p>Preview what's coming in <code>1.30.x</code> release</p>
+        </section>
+        <section>
+          <section>
+            <h2>Re-using views with fragments</h2>
+          </section>
+          <section>
+            <pre><code class='xml' data-trim>
+  &lt;core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"&gt;
+    &lt;Label text="{myDescription}" /&gt;
+    &lt;Input value="{myValue}" /&gt;
+  &lt;/core:FragmentDefinition&gt;
+
+</code>
+</pre>
+          </section>
+          <section>
+            <pre><code class='xml' data-trim>
+  &lt;mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"&gt;
+    &lt;core:Fragment fragmentName="sample.fragment.Field" type="XML" /&gt;
+  &lt;/mvc:View&gt;
+
 </code></pre>
           </section>
         </section>
